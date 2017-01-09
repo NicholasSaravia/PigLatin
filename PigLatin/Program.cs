@@ -28,9 +28,9 @@ namespace PigLatin
 
             if (areaCode == 864)
             {
-                if (favoriteAnimal == "Cats")
+                if (favoriteAnimal == "Cats" || favoriteAnimal == "cats")
                 {
-                    char firstLetter = favoriteAnimal[0];
+                    char firstLetter = favoriteAnimal.ToLower()[0];
                     char secondLetter = favoriteAnimal[1];
                     char thirdLetter = favoriteAnimal[2];
                     char fourthLetter = favoriteAnimal[3];
@@ -38,9 +38,9 @@ namespace PigLatin
                     Console.WriteLine($"Im so glad you like {secondLetter}{thirdLetter}{fourthLetter}{firstLetter}ay!");
                 }
 
-                else if (favoriteAnimal == "Dogs")
+                else if (favoriteAnimal == "Dogs" || favoriteAnimal == "dogs")
                 {
-                    char firstLetter = favoriteAnimal[0];
+                    char firstLetter = favoriteAnimal.ToLower()[0];
                     char secondLetter = favoriteAnimal[1];
                     char thirdLetter = favoriteAnimal[2];
                     char fourthLetter = favoriteAnimal[3];
