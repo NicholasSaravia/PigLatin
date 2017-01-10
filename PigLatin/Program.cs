@@ -18,7 +18,7 @@ namespace PigLatin
 
             Console.WriteLine("Becuase you have a love for " +
                               favoriteAnimal +
-                              " then of course your house would be the color "
+                              ", then of course your house would be the color "
                               + houseColor +
                               "!");
 
@@ -34,8 +34,9 @@ namespace PigLatin
                     char secondLetter = favoriteAnimal[1];
                     char thirdLetter = favoriteAnimal[2];
                     char fourthLetter = favoriteAnimal[3];
+                    string one = "I'm so glad you like";
 
-                    Console.WriteLine($"Im so glad you like {secondLetter}{thirdLetter}{fourthLetter}{firstLetter}ay!");
+                    Console.WriteLine($" {one} {secondLetter}{thirdLetter}{fourthLetter}{firstLetter}ay!");               
                 }
 
                 else if (favoriteAnimal == "Dogs" || favoriteAnimal == "dogs")
