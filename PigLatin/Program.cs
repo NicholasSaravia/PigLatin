@@ -26,9 +26,9 @@ namespace PigLatin
                 'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'z',
             };
 
-            List<string> vowels = new List<string>
+            List<char> vowels = new List<char>
             {
-                "a", "e", "i", "o", "u", "y"
+                'a', 'e', 'i', 'o', 'u', 'y'
             };
 
             if (consanents.Contains(One) && consanents.Contains(Two))
@@ -39,17 +39,18 @@ namespace PigLatin
                 Console.ReadLine();
             }
 
-            else if (vowels.Contains(One.ToString()))
+            else if (vowels.Contains(One))
             {
-                string vowelway = favoriteAnimal + "way";
-                Console.WriteLine(vowelway);
+                string cat = favoriteAnimal + "way";
+                Console.WriteLine(cat);
                 Console.ReadLine();
             }
 
-            else if (consanents.Contains(One) && vowels.Contains(Two.ToString()))
+            else if (consanents.Contains(One) && vowels.Contains(Two))
             {
-                string owelvay = favoriteAnimal.Remove(0) + "ay";
-                Console.WriteLine(owelvay);
+                string owelvay = favoriteAnimal.Remove(0, 1);
+                string dog = owelvay + "ay";
+                Console.WriteLine(dog);
                 Console.ReadLine();
             }
 
