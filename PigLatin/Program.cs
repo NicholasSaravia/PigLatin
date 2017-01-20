@@ -10,6 +10,41 @@ namespace PigLatin
     {
         static void Main(string[] args)
         {
+
+
+
+
+            Console.WriteLine("what is your favorite animal");
+            string favoriteAnimal = Console.ReadLine();
+
+            char One = favoriteAnimal[0];
+            char Two = favoriteAnimal[1];
+            char three = favoriteAnimal[2];
+
+            List<char> consanents = new List<char>
+            {
+                'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'z',
+            };
+
+            List<string> vowels = new List<string>
+            {
+                "a", "e", "i", "o", "u", "y"
+            };
+
+            if (consanents.Contains(One) && consanents.Contains(Two))                      
+            {
+                string newFavoriteAnimal = favoriteAnimal.Remove(0, 1) + One + Two + "ay";
+                Console.WriteLine(newFavoriteAnimal);
+                Console.ReadLine();
+            }
+
+        }
+    }
+}
+
+
+/*
+  {
             Console.WriteLine("Do you like Cats or Dogs?");
             string favoriteAnimal = Console.ReadLine();
 
@@ -60,7 +95,4 @@ namespace PigLatin
             }
 
             Console.ReadLine();
-
-        }
-    }
-}
+ */
