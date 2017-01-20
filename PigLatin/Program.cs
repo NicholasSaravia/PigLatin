@@ -11,11 +11,8 @@ namespace PigLatin
         static void Main(string[] args)
         {
 
-
-
-
             Console.WriteLine("what is your favorite animal");
-            string favoriteAnimal = Console.ReadLine();
+            string favoriteAnimal = Console.ReadLine().ToLower();
 
             char One = favoriteAnimal[0];
             char Two = favoriteAnimal[1];
@@ -34,8 +31,8 @@ namespace PigLatin
             if (consanents.Contains(One) && consanents.Contains(Two))
             {
                 string newFavoriteAnimal = favoriteAnimal.Remove(0,2);
-                string cat = newFavoriteAnimal + One + Two + "ay";
-                Console.WriteLine(cat);
+                string bird = newFavoriteAnimal + One + Two + "ay";
+                Console.WriteLine(bird);
                 Console.ReadLine();
             }
 
@@ -48,8 +45,8 @@ namespace PigLatin
 
             else if (consanents.Contains(One) && vowels.Contains(Two))
             {
-                string owelvay = favoriteAnimal.Remove(0, 1);
-                string dog = owelvay + "ay";
+                string bear = favoriteAnimal.Remove(0, 1);
+                string dog = bear + "ay";
                 Console.WriteLine(dog);
                 Console.ReadLine();
             }
