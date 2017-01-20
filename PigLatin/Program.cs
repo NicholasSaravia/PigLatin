@@ -31,10 +31,25 @@ namespace PigLatin
                 "a", "e", "i", "o", "u", "y"
             };
 
-            if (consanents.Contains(One) && consanents.Contains(Two))                      
+            if (consanents.Contains(One) && consanents.Contains(Two))
             {
-                string newFavoriteAnimal = favoriteAnimal.Remove(0, 1) + One + Two + "ay";
-                Console.WriteLine(newFavoriteAnimal);
+                string newFavoriteAnimal = favoriteAnimal.Remove(0,2);
+                string cat = newFavoriteAnimal + One + Two + "ay";
+                Console.WriteLine(cat);
+                Console.ReadLine();
+            }
+
+            else if (vowels.Contains(One.ToString()))
+            {
+                string vowelway = favoriteAnimal + "way";
+                Console.WriteLine(vowelway);
+                Console.ReadLine();
+            }
+
+            else if (consanents.Contains(One) && vowels.Contains(Two.ToString()))
+            {
+                string owelvay = favoriteAnimal.Remove(0) + "ay";
+                Console.WriteLine(owelvay);
                 Console.ReadLine();
             }
 
@@ -42,57 +57,3 @@ namespace PigLatin
     }
 }
 
-
-/*
-  {
-            Console.WriteLine("Do you like Cats or Dogs?");
-            string favoriteAnimal = Console.ReadLine();
-
-            Console.WriteLine("what color is your house?");
-            string houseColor = Console.ReadLine();
-
-            Console.WriteLine("Becuase you have a love for " +
-                              favoriteAnimal +
-                              ", then of course your house would be the color "
-                              + houseColor +
-                              "!");
-
-            Console.WriteLine("Now, time for a test:");
-            Console.Write("What is Greenville's three digit area code? ");
-            int areaCode = int.Parse(Console.ReadLine());
-
-            if (areaCode == 864)
-            {
-                if (favoriteAnimal == "Cats" || favoriteAnimal == "cats")
-                {
-                    char firstLetter = favoriteAnimal.ToLower()[0];
-                    char secondLetter = favoriteAnimal[1];
-                    char thirdLetter = favoriteAnimal[2];
-                    char fourthLetter = favoriteAnimal[3];
-                    string one = "I'm so glad you like";
-
-                    Console.WriteLine($" {one} {secondLetter}{thirdLetter}{fourthLetter}{firstLetter}ay!");               
-                }
-
-                else if (favoriteAnimal == "Dogs" || favoriteAnimal == "dogs")
-                {
-                    char firstLetter = favoriteAnimal.ToLower()[0];
-                    char secondLetter = favoriteAnimal[1];
-                    char thirdLetter = favoriteAnimal[2];
-                    char fourthLetter = favoriteAnimal[3];
-
-                    Console.WriteLine("" + $"{secondLetter}{thirdLetter}{fourthLetter}{firstLetter}ay, are way more hyper than cats");
-                }
-
-                else
-                {
-                    Console.WriteLine("you did not answer the first question orrectlycay!");
-                }
-            }
-            else
-            {
-                Console.WriteLine("That is not GVL's area code");
-            }
-
-            Console.ReadLine();
- */
